@@ -1,6 +1,7 @@
 'use strict';
 
-let BinaryTree = require("./tree");
+let BinaryTree = require("./binaryTree");
+let binarySearchTree = require("./binarySearchTree");
 let Node = require("./Node");
 
 
@@ -42,3 +43,16 @@ console.log('in order: ', inOrder);
 let postOrder = tree.postOrder();
 console.log('post order: ', postOrder);
 //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
+
+
+let bst = new binarySearchTree();
+bst.add(5);
+bst.add(2);
+bst.add(8);
+bst.add(9);
+bst.add(7);
+bst.add(4);
+bst.add(3);
+
+
+console.log("BST preOrder",bst.preOrder());
