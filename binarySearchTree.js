@@ -64,7 +64,7 @@ class binarySearchTree extends binaryTree {
         let traverse = (value, root) => {
 
 
-            if (root == value) { return true; }
+            if (value == root.value) { return true; }
 
             if (value > root) { traverse(value, root.right); }
 
