@@ -57,4 +57,6 @@ bst.add(3);
 console.log("BST preOrder",bst.preOrder());
 
 console.log(bst.contains(5));
+console.log(bst.contains(4));
+console.log(bst.contains(8));
 console.log(bst.contains(1));
