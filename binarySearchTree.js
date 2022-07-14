@@ -58,18 +58,18 @@ class binarySearchTree extends binaryTree {
 
 
     contains = (value) => {
-
+        let result = null;
 
 
         let traverse = (value, root) => {
 
+            if (root) {
+                if (value == root.value) {  return true; }
 
-            if (value == root.value) { return true; }
+                if (value > root.value) {  return traverse(value, root.right); }
 
-            if (value > root) { traverse(value, root.right); }
-
-            if (value < root) { traverse(value, root.left); }
-
+                if (value < root.value) {  return traverse(value, root.left); }
+            }
             return false;
         }
 
