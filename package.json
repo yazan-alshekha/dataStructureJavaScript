@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "jest": "^28.1.3"
+  },
+  "name": "practise_data_structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
