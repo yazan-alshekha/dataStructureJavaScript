@@ -3,7 +3,7 @@
 let BinaryTree = require("./binaryTree");
 let binarySearchTree = require("./binarySearchTree");
 let Node = require("./Node");
-
+let breadthFirst = require("./breadthFirst");
 
 let tree = null;
 
@@ -60,3 +60,7 @@ console.log(bst.contains(5));
 console.log(bst.contains(4));
 console.log(bst.contains(8));
 console.log(bst.contains(1));
+
+
+console.log(breadthFirst(bst) );
+console.log(breadthFirst(tree));
