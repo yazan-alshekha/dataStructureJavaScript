@@ -1,9 +1,8 @@
 "use strict";
 
+let fizzBuzz = require("../tree/fizz_buzz.js");
+let Node = require("../tree/Node.js");
 let BinaryTree = require("../tree/binaryTree");
-
-let Node = require("../tree/Node");
-
 
 let tree = null;
 
@@ -16,6 +15,7 @@ let six = new Node(6);
 let seven = new Node(7);
 let eight = new Node(8);
 let nine = new Node(9);
+let fifteen = new Node(15);
 
 one.left = two;
 one.right = three;
@@ -25,27 +25,17 @@ seven.left = eight;
 seven.right = nine;
 three.left = four;
 three.right = five;
+five.right= fifteen;
+
 
 tree = new BinaryTree(one);
 
-describe('Binary tree', () => {
 
-    it('preOrder', () => {
+describe("fizzBuzz",()=>{
 
-        expect( tree.preOrder() ).toEqual([1,2,6,7,8,9,3,4,5]);
-        
-    });
-
-    it('inOrder', () => {
-
-        expect( tree.inOrder() ).toEqual([6,8,7,9,2,1,4,3,5]);
-
-    });
-    8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
-    it('postOrder', () => {
-
-        expect( tree.postOrder() ).toEqual([8,9,7,6,2,4,5,3,1]);
-
+    it("fizzBuzz",()=>{
+        // console.log(fizzBuzz(tree));
+        expect( fizzBuzz(tree) ).toEqual([1,2,"fizz",7,8,"fizz","fizz",4,"buzz",'fizzBuzz']);
     });
 
 });
